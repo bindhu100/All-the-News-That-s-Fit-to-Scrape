@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="#">
+      <img src="./image/icon.png" width="30" height="30" alt="">
+    </a>
+
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul id="alinav" class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Mongo Scraper <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Saved Articles</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger">Scrape new articles</button>
+          <!-- <a class="nav-link disabled" href="#">Scrape new articles</a> -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center">NY Times Technology Page Scraper</h1>
+      <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+    </div>
+  </div>
+
+  <!-- articles -->
+  <div></div>
+
+
+  <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!-- app.js -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
