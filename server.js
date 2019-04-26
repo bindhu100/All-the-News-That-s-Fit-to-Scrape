@@ -1,5 +1,7 @@
 var express_handlebar = require("express-handlebars");
 var express = require("express");
+// Initialize Express
+var app = express();
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
@@ -35,8 +37,6 @@ mongoose.connect(MONGODB_URI, {
 //Define port
 var port = process.env.PORT || 3000
 
-// Initialize Express
-var app = express();
 
 // Use morgan and body parser with our app
 app.use(logger("dev"));
@@ -47,7 +47,7 @@ app.use(bodyParser.urlencoded({
 // Make public a static dir
 app.use(express.static("public"));
 
-
+require('./routes/apiroutes')(app);
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
@@ -95,48 +95,57 @@ app.get("/saved", function(req, res) {
     res.render("saved", hbsObject);
   });
 });
-
+// 888888888888888888888888888888888888
 // A GET request to scrape the echojs website
-app.get("/scrape", function(req, res) {
-  // First, we grab the body of the html with request
-  request("https://www.nytimes.com/", function(error, response, html) {
-    // Then, we load that into cheerio and save it to $ for a shorthand selector
-    var $ = cheerio.load(html);
-    // Now, we grab every h2 within an article tag, and do the following:
-    $("article").each(function(i, element) {
+// app.get("/scrape", function(req, res) {
+//   // First, we grab the body of the html with request
+//   request("https://www.cnn.com/specials/health/live-longer", function(error, response, html) {
+//     // Then, we load that into cheerio and save it to $ for a shorthand selector
+//     var $ = cheerio.load(html);
+//     // Now, we grab every h2 within an article tag, and do the following:
+//     $("span.cd__headline-text").each(function(i, element) {
 
-      // Save an empty result object
-      var result = {};
+//       // Save an empty result object
+//       var result = {};
 
-      // Add the title and summary of every link, and save them as properties of the result object
-      result.title = $(this).children("h2").text();
-      result.summary = $(this).children(".summary").text();
-      result.link = $(this).children("h2").children("a").attr("href");
+//       // Add the title and summary of every link, and save them as properties of the result object
+//       // result.title = $(this).children("h2").text();
+//    title = $(this).text();
+//     //summary = $(this).children(".summary").text();
+//      link = $(this).parent("a").attr("href");
 
-      // Using our Article model, create a new entry
-      // This effectively passes the result object to the entry (and the title and link)
-      var entry = new Article(result);
+//       result.push({
+//         title: title,
+//         //summary: summary,
+//         link: link
+//       });
 
-      // Now, save that entry to the db
-      entry.save(function(err, doc) {
-        // Log any errors
-        if (err) {
-          console.log(err);
-        }
-        // Or log the doc
-        else {
-          console.log(doc);
-        }
-      });
+//       console.log(result);
 
-    });
-        res.send("Scrape Complete");
+//       // Using our Article model, create a new entry
+//       // This effectively passes the result object to the entry (and the title and link)
+//       var entry = new Article(result);
 
-  });
-  // Tell the browser that we finished scraping the text
-});
+//       // Now, save that entry to the db
+//       entry.save(function(err, doc) {
+//         // Log any errors
+//         if (err) {
+//           console.log(err);
+//         }
+//         // Or log the doc
+//         else {
+//           console.log(doc);
+//         }
+//       });
 
-// This will get the articles we scraped from the mongoDB
+//     });
+//         res.send("Scrape Complete");
+
+//   });
+//   // Tell the browser that we finished scraping the text
+// });
+
+// // This will get the articles we scraped from the mongoDB
 app.get("/articles", function(req, res) {
   // Grab every doc in the Articles array
   Article.find().sort({ _id: 1 }).limit(5, function(error, doc) {
@@ -150,7 +159,7 @@ app.get("/articles", function(req, res) {
     }
   });
 });
-
+// 888888888888888888888888888888888888
 // Grab an article by it's ObjectId
 app.get("/articles/:id", function(req, res) {
   // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
