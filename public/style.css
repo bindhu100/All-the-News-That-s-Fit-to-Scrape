@@ -4,3 +4,29 @@
 body{
   /* background-color: brown; */
 }
+#messagemodal {
+  /* margin-left: 550px;
+  /* margin-right: 550px; */
+  /* top: 20%; */
+  top: 15%;
+  width: 300px;
+  height: 500px;
+  margin-left: 47.4%
+  
+}
+
+#footerModal{
+  background-color: brown;
+  
+}
+#footerHeader{
+  background-color: brown;
+  color: aliceblue;
+}
+
+#footerBody{
+  background-color: antiquewhite;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: large;
+}

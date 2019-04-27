@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> --}}
                 <h4 class="modal-title">Notes for {{this.title}}</h4>
             </div>
             <div class="modal-body">
@@ -30,8 +30,41 @@
 
             </div>
             <div class="modal-footer">
+
+ {{!-- <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span> Close</button> --}}
+
                 <button type="button" class="btn btn-primary saveNote" data-id={{this._id}}>Save Note</button>
+
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+
+
+
+{{!-- 88888888888888888888 --}}
+
+<div id ="messagemodal" class="modal" tabindex="-1"  role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div id="footerHeader" class="modal-header">
+        <h5 class="modal-title" >Missing Note</h5>
+        {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> --}}
+      </div>
+      <div id="footerBody" class="modal-body text-center">
+        <p>please enter a note to save </p>
+        <img src="/public/image/livres.gif" alt="">
+        {{!-- <img id="cry" src="./image/giphy.gif" alt=""> --}}
+      </div>
+      
+      <div id="footerModal"class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+

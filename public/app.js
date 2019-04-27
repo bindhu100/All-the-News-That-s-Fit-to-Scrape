@@ -41,7 +41,11 @@ $(".delete").on("click", function() {
 $(".saveNote").on("click", function() {
   var thisId = $(this).attr("data-id");
   if (!$("#noteText" + thisId).val()) {
-      alert("please enter a note to save")
+      // alert("please enter a note to save")
+      $("#messagemodal").modal('show')
+     
+    
+     
   }else 
   {
     $.ajax({

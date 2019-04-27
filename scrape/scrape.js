@@ -25,7 +25,8 @@ var scrape = function(){
 
         const result = {
           title,
-          link
+          link,
+          summary 
         }
 
         console.log(result);
