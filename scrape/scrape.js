@@ -2,10 +2,6 @@
 var request = require("request");
 var cheerio = require("cheerio");
 var Article = require("../models/Article");
-// var express = require("express");
-
-
-// app.get("/scrape", function(req, res)
 
 var scrape = function(){
   return new Promise((resolve, reject) => {
@@ -18,9 +14,7 @@ var scrape = function(){
 
 
         // Add the title and summary of every link, and save them as properties of the result object
-        // result.title = $(this).children("h2").text();
         title = $(this).text();
-      //summary = $(this).children(".summary").text();
         link = $(this).parent("a").attr("href");
 
         const result = {
@@ -34,7 +28,6 @@ var scrape = function(){
         // Using our Article model, create a new entry
         // This effectively passes the result object to the entry (and the title and link)
         var entry = new Article(result);
-
 
         // Now, save that entry to the db
         entry.save(function(err, doc) {
