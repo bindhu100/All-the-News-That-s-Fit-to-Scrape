@@ -12,5 +12,10 @@ In this assignment, create a web app that lets users view and leave comments on 
 <li>cheerio</li>
 <li>axios</li>
 <li>path</li>
-<li>ody-parser</li>
+<li>body-parser</li>
 </ul>
+
+<h3>:house:Home Page</h3>
+
+
+![GitHub Logo](public/image/img/homePage.PNG)
