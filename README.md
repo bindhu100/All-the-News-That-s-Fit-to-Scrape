@@ -18,4 +18,4 @@ In this assignment, create a web app that lets users view and leave comments on 
 <h3>:house:Home Page</h3>
 
 
-![GitHub Logo](/image/img/homePage.PNG)
+![GitHub Logo](public/image/homePage.PNG)
