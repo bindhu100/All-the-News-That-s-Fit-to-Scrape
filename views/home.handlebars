@@ -1,84 +1,33 @@
-{{!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-
-    <a class="navbar-brand" href="#">
-      <img src="./image/icon.png" width="30" height="30" alt="">
-    </a>
-
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul id="alinav" class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Mongo Scraper <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/saved">Saved Articles</a>
-        </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-danger">Scrape new articles</button>
-          <!-- <a class="nav-link disabled" href="#">Scrape new articles</a> -->
-        </li>
-      </ul>
-    </div>
-  </nav> --}}
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4 text-center">CNN Live L<i class="fas fa-check-circle"></i>nger Page Scraper</h1>
-      <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
-    </div>
-  </div>
-
-  <!-- articles -->
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
- <div class="col-md-12">
-        {{#if article}}
-            {{#each article}}
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>{{this.title}}</h4>
-                </div>
-                <div class="panel-body">
-                    <p> {{this.summary}}</p>
-                    <a href={{this.link}} target="_blank">{{this.link}}</a>
-                    <br><br>
-                    <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
-                </div>
-            </div>
-            {{/each}}
-        {{else}}
-        <div class="panel panel-default">
-            <div class="panel-body">
-            <h4>Uh Oh. Looks like we don't have any new articles.</h4>
-            </div>
-         </div>
-        {{/if}}
-    </div>
+    <h1 class="display-4 text-center">CNN Live L<i class="fas fa-check-circle"></i>nger Page Scraper</h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
   </div>
+</div>
 
-
-  {{!-- <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+<!-- articles -->
+<div class="container">
+  <div class="col-md-12">
+    {{#if article}}
+    {{#each article}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>{{this.title}}</h4>
+      </div>
+      <div class="panel-body">
+        <p> {{this.summary}}</p>
+        <a href={{this.link}} target="_blank">{{this.link}}</a>
+        <br><br>
+        <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
       </div>
     </div>
-  </div> --}}
+    {{/each}}
+    {{else}}
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>
