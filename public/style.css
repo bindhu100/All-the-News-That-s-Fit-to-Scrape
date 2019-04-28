@@ -14,6 +14,16 @@ body{
   margin-left: 47.4% */
   
 }
+.jumbotron-fluid{
+  /* background-image: url(./image/istockphoto.jpg); */
+  background-image: url(./image/images.jpg)
+}
+.text-center{
+  font-family: serif;
+} 
+body{
+  background-color: #fefefe;
+}
 
 #footerModal{
   background-color: brown;
@@ -29,4 +39,16 @@ body{
   font-family: cursive;
   font-weight: bold;
   font-size: large;
+}
+#notehead{
+  background-image: url("./image/wallpaper-sky-blue-background-13.jpg");
+}
+#notebody{
+  background-image: url("./image/missing_modalBody.jpg");
+}
+#notefooter{
+  background-image: url("./image/wallpaper-sky-blue-background-13.jpg");
+}
+.modal-title{
+  font-family: serif;
 }
