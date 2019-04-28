@@ -1,1 +1,1 @@
-<h1>CNN Live L<i class="fas fa-check-circle"></i>nger Page Scraper</h1>
+<h1>:newspaper:All the News That's Fit to Scrape</h1>
