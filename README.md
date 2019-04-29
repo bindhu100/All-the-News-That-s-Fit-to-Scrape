@@ -19,3 +19,22 @@ In this assignment, create a web app that lets users view and leave comments on 
 
 
 ![GitHub Logo](public/image/homePage.PNG)
+
+
+<h3>:briefcase:Saved Articles</h3>
+
+
+![GitHub Logo](public/image/SavedArticles.PNG)
+
+
+<h3>:green_book:Add a Note</h3>
+
+
+![GitHub Logo](public/image/addNote.PNG)
+
+
+<h3>:telescope:Save Note Buttion Validation</h3>
+
+
+![GitHub Logo](public/image/missingNote.PNG)
+
