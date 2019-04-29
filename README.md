@@ -33,7 +33,7 @@ In this assignment, create a web app that lets users view and leave comments on 
 ![GitHub Logo](public/image/addNote.PNG)
 
 
-<h3>:telescope:Save Note Buttion Validation</h3>
+<h3>:telescope:Save Note Button Validation</h3>
 
 
 ![GitHub Logo](public/image/missingNote.PNG)
