@@ -2,7 +2,7 @@
 
 <h3>:mag_right:Overview</h3>
 
-In this assignment, create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
+In this assignment, create a web app that lets users view and leave comments on the latest news. To get the articles, flex Mongoose and Cheerio muscles to scrape news from another site.
 
 <h3>Tehcnologies Used</h3>
 <ul>
